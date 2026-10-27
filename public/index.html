@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raíces & Rito - Mates & Yerbas Artesanales</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-crema text-cafe-oscuro font-sans antialiased overflow-x-hidden selection:bg-cafe-oro/20 selection:text-cafe-oscuro">
+
+  <!-- Floating Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 backdrop-blur-md bg-crema/90 border-b border-cafe-claro/20 shadow-sm" id="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-cafe-oscuro flex items-center justify-center text-crema font-serif text-xl font-bold shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:bg-cafe-medio">
+          <i class="fa-solid fa-leaf text-cafe-oro text-base"></i>
+        </div>
+        <span class="font-serif font-bold text-xl tracking-wider text-cafe-oscuro">RAÍCES <span class="text-cafe-oro font-light">&</span> RITO</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#historia" class="hover:text-cafe-oro transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cafe-oro hover:after:w-full after:transition-all">NUESTRO RITO</a>
+        <a href="#productos" class="hover:text-cafe-oro transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cafe-oro hover:after:w-full after:transition-all">COLECCIÓN</a>
+        <a href="#experiencia" class="hover:text-cafe-oro transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cafe-oro hover:after:w-full after:transition-all">EL ARTE DEL MATE</a>
+        <a href="#testimonios" class="hover:text-cafe-oro transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cafe-oro hover:after:w-full after:transition-all">COMUNIDAD</a>
+      </div>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="#productos" class="hidden sm:inline-flex items-center gap-2 bg-cafe-oscuro hover:bg-cafe-medio text-crema px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5">
+          <span>Explorar tienda</span>
+          <i class="fa-solid fa-arrow-right text-xs text-cafe-oro"></i>
+        </a>
+        
+        <button id="mobile-menu-btn" class="md:hidden text-cafe-oscuro text-xl p-2 focus:outline-none" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-crema-intenso border-b border-cafe-claro/30 p-6 flex-col gap-4 shadow-xl">
+      <a href="#historia" class="py-2 border-b border-cafe-claro/20 font-medium hover:text-cafe-oro">NUESTRO RITO</a>
+      <a href="#productos" class="py-2 border-b border-cafe-claro/20 font-medium hover:text-cafe-oro">COLECCIÓN</a>
+      <a href="#experiencia" class="py-2 border-b border-cafe-claro/20 font-medium hover:text-cafe-oro">EL ARTE DEL MATE</a>
+      <a href="#testimonios" class="py-2 font-medium hover:text-cafe-oro">COMUNIDAD</a>
+      <a href="#productos" class="mt-2 text-center bg-cafe-oscuro text-crema py-3 rounded-xl font-medium">Explorar Tienda</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+    <!-- Background Decor Elements -->
+    <div class="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(#8C6D53_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-cafe-suave/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 -left-20 w-80 h-80 bg-cafe-oro/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 z-10 grid md:grid-cols-12 gap-12 items-center">
+      <!-- Hero Left Text -->
+      <div class="md:col-span-7 flex flex-col gap-6 text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cafe-claro/30 border border-cafe-medio/20 text-cafe-oscuro text-xs font-semibold uppercase tracking-wider w-max">
+          <i class="fa-solid fa-certificate text-cafe-oro"></i> Edición Selección Orgánica
+        </div>
+        
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cafe-oscuro leading-[1.15]">
+          El calor de lo clásico. <br>
+          <span class="italic font-light text-cafe-medio">La pausa que conecta.</span>
+        </h1>
+        
+        <p class="text-cafe-medio text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+          Descubre nuestra colección de yerbas orgánicas estacionadas naturalmente y mates trabajados a mano por artesanos. Eleva tu pausa diaria a una ceremonia personal.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#productos" class="bg-cafe-oscuro hover:bg-cafe-medio text-crema px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex items-center gap-3 group">
+            <span>Ver Colección</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform text-cafe-oro"></i>
+          </a>
+          <a href="#experiencia" class="bg-crema border-2 border-cafe-medio/30 hover:border-cafe-medio text-cafe-oscuro px-7 py-4 rounded-full font-medium transition-all duration-300 hover:bg-cafe-claro/20 flex items-center gap-2">
+            <i class="fa-solid fa-play text-xs text-cafe-medio"></i>
+            <span>Aprender el Rito</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-cafe-claro/40 mt-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-seedling text-cafe-oro text-xl"></i>
+            <span class="text-xs font-semibold text-cafe-medio uppercase tracking-wide">100% Orgánico</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-hand-holding-heart text-cafe-oro text-xl"></i>
+            <span class="text-xs font-semibold text-cafe-medio uppercase tracking-wide">Hecho a Mano</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-clock text-cafe-oro text-xl"></i>
+            <span class="text-xs font-semibold text-cafe-medio uppercase tracking-wide">Estacionado 24 Meses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right Image Frame -->
+      <div class="md:col-span-5 relative flex justify-center">
+        <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-crema-intenso">
+          <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800" alt="Mate tradicional artesanal" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-cafe-oscuro/80 via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-6 left-6 right-6 text-crema p-4 rounded-2xl bg-cafe-oscuro/40 backdrop-blur-md border border-crema/20">
+            <p class="font-serif font-semibold text-lg text-crema">Imperial de Calabaza & Alpaca</p>
+            <p class="text-xs text-crema/80 font-light">Tallado manualmente con virola grabada</p>
+          </div>
+        </div>
+
+        <!-- Floating Badge -->
+        <div class="absolute -bottom-6 -left-6 bg-crema-intenso p-4 rounded-2xl shadow-xl border border-cafe-claro/40 flex items-center gap-3 animate-bounce-slow">
+          <div class="w-10 h-10 rounded-full bg-cafe-oro/20 flex items-center justify-center text-cafe-oscuro font-bold">
+            <i class="fa-solid fa-star text-cafe-oro"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-cafe-oscuro">Sabor Incomparable</p>
+            <p class="text-[10px] text-cafe-medio">Sin acidez, molienda perfecta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Historia / Valores -->
+  <section id="historia" class="py-24 bg-crema-intenso relative border-y border-cafe-claro/20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-cafe-oro mb-2">Tradición y Calidad</h2>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cafe-oscuro">Más que una bebida, una filosofía de pausa</h3>
+        <div class="w-16 h-0.5 bg-cafe-oro mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-crema p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-cafe-claro/30 flex flex-col items-start group">
+          <div class="w-12 h-12 rounded-xl bg-cafe-claro/30 flex items-center justify-center text-cafe-medio text-xl mb-6 group-hover:bg-cafe-oscuro group-hover:text-crema transition-colors">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-cafe-oscuro mb-3">Estacionamiento Natural</h4>
+          <p class="text-cafe-medio text-sm leading-relaxed">
+            Nuestra yerba reposa durante 18 a 24 meses en depósitos controlados. Este proceso artesanal elimina la acidez y potencia un sabor suave pero persistente.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-crema p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-cafe-claro/30 flex flex-col items-start group">
+          <div class="w-12 h-12 rounded-xl bg-cafe-claro/30 flex items-center justify-center text-cafe-medio text-xl mb-6 group-hover:bg-cafe-oscuro group-hover:text-crema transition-colors">
+            <i class="fa-solid fa-hands-holding"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-cafe-oscuro mb-3">Artesanía de Origen</h4>
+          <p class="text-cafe-medio text-sm leading-relaxed">
+            Cada mate de calabaza, madera o cerámica es curado y montado individualmente. Las virolas de alpaca son grabadas a mano por orfebres tradicionales.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-crema p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-cafe-claro/30 flex flex-col items-start group">
+          <div class="w-12 h-12 rounded-xl bg-cafe-claro/30 flex items-center justify-center text-cafe-medio text-xl mb-6 group-hover:bg-cafe-oscuro group-hover:text-crema transition-colors">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-cafe-oscuro mb-3">Sostenibilidad Activa</h4>
+          <p class="text-cafe-medio text-sm leading-relaxed">
+            Trabajamos con moliendas sustentables libres de agroquímicos. Apoyamos a pequeños productores manteniendo intacto el ecosistema del monte nativo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Productos (Colección) -->
+  <section id="productos" class="py-24 bg-crema">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-cafe-oro mb-2">Nuestra Tienda</h2>
+          <h3 class="font-serif text-3xl md:text-4xl font-bold text-cafe-oscuro">Piezas & Moliendas Seleccionadas</h3>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 bg-crema-intenso p-1.5 rounded-xl border border-cafe-claro/30">
+          <button data-filter="all" class="filter-btn active-tab px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all">TODOS</button>
+          <button data-filter="mates" class="filter-btn inactive-tab px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all">MATES</button>
+          <button data-filter="yerbas" class="filter-btn inactive-tab px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all">YERBAS</button>
+          <button data-filter="accesorios" class="filter-btn inactive-tab px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all">ACCESORIOS</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Item 1: Mate -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="mates">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600" alt="Mate Imperial Alpaca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-cafe-oscuro text-crema text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Popular</span>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Imperial de Calabaza</h4>
+              <span class="font-bold text-cafe-medio">$45.00</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Calabaza brasileña seleccionada con virola de alpaca cincelada a mano.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-shield text-cafe-oro mr-1"></i> Garantía Artesanal</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Yerba -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="yerbas">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600" alt="Yerba Organica 500g" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-cafe-oro text-cafe-oscuro text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Orgánico</span>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Yerba Reservada 24 Meses</h4>
+              <span class="font-bold text-cafe-medio">$12.50</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Molienda equilibrada con bajo contenido de polvo y secado barbacuá tradicional.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-leaf text-cafe-oro mr-1"></i> 500g</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Mate Madera -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="mates">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=600" alt="Mate Algarrobo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Camionero de Algarrobo</h4>
+              <span class="font-bold text-cafe-medio">$38.00</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Tallado en madera de algarrobo macizo pulido con cera natural de abejas.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-tree text-cafe-oro mr-1"></i> Madera Noble</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Accesorio (Bombilla) -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="accesorios">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&q=80&w=600" alt="Bombilla Alpaca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Bombilla Pico de Loro</h4>
+              <span class="font-bold text-cafe-medio">$18.00</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Alpaca maciza con filtro tipo cuchara desarmable para fácil limpieza.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-filter text-cafe-oro mr-1"></i> Alpaca 100%</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Yerba Blend -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="yerbas">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=600" alt="Yerba Botánica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Blend Herbal Botánico</h4>
+              <span class="font-bold text-cafe-medio">$14.00</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Yerba mate orgánica infusionada con menta, cedrón y menta peperina.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-spa text-cafe-oro mr-1"></i> Digestivo</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Set Completo -->
+        <div class="product-card group bg-crema-intenso rounded-2xl overflow-hidden border border-cafe-claro/30 hover:border-cafe-medio/40 transition-all duration-300 flex flex-col" data-category="accesorios">
+          <div class="relative aspect-square overflow-hidden bg-cafe-claro/20">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=600" alt="Set Kit Mate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-cafe-medio text-crema text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Set Regalo</span>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg text-cafe-oscuro">Kit Ritual Completo</h4>
+              <span class="font-bold text-cafe-medio">$75.00</span>
+            </div>
+            <p class="text-cafe-medio text-xs leading-relaxed mb-6">Incluye Mate Imperial, Bombilla de alpaca, Termo de 1L y Yerba Reserva 500g.</p>
+            <div class="mt-auto flex items-center justify-between border-t border-cafe-claro/30 pt-4">
+              <span class="text-[11px] text-cafe-medio uppercase font-medium"><i class="fa-solid fa-box-open text-cafe-oro mr-1"></i> Kit Completo</span>
+              <button class="bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-4 py-2 rounded-lg transition-colors font-medium">Detalles</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: El Arte del Mate (Interactive Steps) -->
+  <section id="experiencia" class="py-24 bg-cafe-oscuro text-crema relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-cafe-oro mb-2">Paso a Paso</h2>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-crema">El Ritual de la Preparación</h3>
+        <p class="text-crema/70 text-sm mt-3">Sigue los pasos ancestrales para lograr la cebada perfecta con espumoso duradero.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-cafe-medio/40 border border-cafe-medio/60 p-6 rounded-2xl relative flex flex-col items-start hover:border-cafe-oro transition-colors">
+          <span class="text-4xl font-serif font-bold text-cafe-oro/40 mb-4">01</span>
+          <h4 class="font-serif font-bold text-lg text-crema mb-2">Llenar tres cuartos</h4>
+          <p class="text-crema/70 text-xs leading-relaxed">Coloca yerba hasta las 3/4 partes del mate. Tapa la boca con la mano y sacude e invierte para acomodar el polvo.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-cafe-medio/40 border border-cafe-medio/60 p-6 rounded-2xl relative flex flex-col items-start hover:border-cafe-oro transition-colors">
+          <span class="text-4xl font-serif font-bold text-cafe-oro/40 mb-4">02</span>
+          <h4 class="font-serif font-bold text-lg text-crema mb-2">Inclinación y Montañita</h4>
+          <p class="text-crema/70 text-xs leading-relaxed">Recuesta la yerba a 45° creando un hueco. Vierte un chorro de agua tibia en la cavidad y deja reposar 2 minutos.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-cafe-medio/40 border border-cafe-medio/60 p-6 rounded-2xl relative flex flex-col items-start hover:border-cafe-oro transition-colors">
+          <span class="text-4xl font-serif font-bold text-cafe-oro/40 mb-4">03</span>
+          <h4 class="font-serif font-bold text-lg text-crema mb-2">Introducir Bombilla</h4>
+          <p class="text-crema/70 text-xs leading-relaxed">Tapa el pico de la bombilla con el pulgar y clávala firmemente en la zona húmeda apoyando en la pared del mate.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-cafe-medio/40 border border-cafe-medio/60 p-6 rounded-2xl relative flex flex-col items-start hover:border-cafe-oro transition-colors">
+          <span class="text-4xl font-serif font-bold text-cafe-oro/40 mb-4">04</span>
+          <h4 class="font-serif font-bold text-lg text-crema mb-2">Cebar con Amor</h4>
+          <p class="text-crema/70 text-xs leading-relaxed">Vierte agua a 75°C-80°C siempre cerca de la bombilla, manteniendo la montañita de yerba seca intacta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Section: Quiz/Calculator -->
+  <section class="py-20 bg-crema-intenso border-b border-cafe-claro/20">
+    <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+      <div class="bg-crema p-8 md:p-12 rounded-3xl shadow-lg border border-cafe-claro/40">
+        <span class="text-cafe-oro text-xs font-bold uppercase tracking-widest mb-2 block">Recomendador Interactivo</span>
+        <h3 class="font-serif text-2xl md:text-3xl font-bold text-cafe-oscuro mb-4">¿Cuál es tu Mate Ideal?</h3>
+        <p class="text-cafe-medio text-sm mb-8 max-w-lg mx-auto">Selecciona tu perfil de cebador y te diremos la combinación exacta para tu estilo.</p>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+          <button class="quiz-option border-2 border-cafe-claro/40 hover:border-cafe-medio p-4 rounded-xl text-left transition-all active" data-type="suave">
+            <i class="fa-solid fa-mug-hot text-cafe-oro text-xl mb-2 block"></i>
+            <p class="font-bold text-xs text-cafe-oscuro">El Principiante</p>
+            <p class="text-[11px] text-cafe-medio">Busca un sabor suave y balanceado sin acidez.</p>
+          </button>
+          
+          <button class="quiz-option border-2 border-cafe-claro/40 hover:border-cafe-medio p-4 rounded-xl text-left transition-all" data-type="intenso">
+            <i class="fa-solid fa-bolt text-cafe-oro text-xl mb-2 block"></i>
+            <p class="font-bold text-xs text-cafe-oscuro">El Tradicional</p>
+            <p class="text-[11px] text-cafe-medio">Sabor fuerte, cuerpo amargo y mucha espuma.</p>
+          </button>
+          
+          <button class="quiz-option border-2 border-cafe-claro/40 hover:border-cafe-medio p-4 rounded-xl text-left transition-all" data-type="herbal">
+            <i class="fa-solid fa-leaf text-cafe-oro text-xl mb-2 block"></i>
+            <p class="font-bold text-xs text-cafe-oscuro">El Innovador</p>
+            <p class="text-[11px] text-cafe-medio">Prefiere notas florales, hierbas y refrescantes.</p>
+          </button>
+        </div>
+
+        <div id="quiz-result" class="p-6 bg-crema-intenso rounded-2xl border border-cafe-claro/40 text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="text-[10px] uppercase tracking-wider font-bold text-cafe-oro">Recomendación Sugerida</span>
+            <h4 id="result-title" class="font-serif font-bold text-lg text-cafe-oscuro">Yerba Orgánica Selección Suave + Mate Cerámica</h4>
+            <p id="result-desc" class="text-xs text-cafe-medio">Ideal para iniciar en el mundo del mate con notas dulzonas y fácil lavado.</p>
+          </div>
+          <a href="#productos" class="whitespace-nowrap bg-cafe-oscuro hover:bg-cafe-medio text-crema text-xs px-6 py-3 rounded-full font-semibold transition-colors">Ver Combo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Testimonios -->
+  <section id="testimonios" class="py-24 bg-crema">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-cafe-oro mb-2">Comunidad Matera</h2>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cafe-oscuro">Lo que dicen nuestros cebadores</h3>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-crema-intenso p-8 rounded-2xl border border-cafe-claro/30 relative">
+          <div class="flex text-cafe-oro text-xs gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-cafe-medio text-xs leading-relaxed italic mb-6">"El mate imperial que compré tiene una terminación impecable. La yerba orgánica realmente marca la diferencia en la acidez."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-cafe-medio text-crema flex items-center justify-center font-bold text-xs">MA</div>
+            <div>
+              <h5 class="font-bold text-xs text-cafe-oscuro">Martín A.</h5>
+              <p class="text-[10px] text-cafe-medio">Buenos Aires, ARG</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-crema-intenso p-8 rounded-2xl border border-cafe-claro/30 relative">
+          <div class="flex text-cafe-oro text-xs gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-cafe-medio text-xs leading-relaxed italic mb-6">"La guía de curado que vino con el mate me sirvió muchísimo. Ahora la yerba dura rendidora todas mis mañanas."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-cafe-medio text-crema flex items-center justify-center font-bold text-xs">CL</div>
+            <div>
+              <h5 class="font-bold text-xs text-cafe-oscuro">Camila L.</h5>
+              <p class="text-[10px] text-cafe-medio">Santiago, CH</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-crema-intenso p-8 rounded-2xl border border-cafe-claro/30 relative">
+          <div class="flex text-cafe-oro text-xs gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-cafe-medio text-xs leading-relaxed italic mb-6">"Excelente presentación y empaque. El blend botánico se volvió mi favorito absoluto para las tardes de trabajo."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-cafe-medio text-crema flex items-center justify-center font-bold text-xs">GF</div>
+            <div>
+              <h5 class="font-bold text-xs text-cafe-oscuro">Gonzalo F.</h5>
+              <p class="text-[10px] text-cafe-medio">Montevideo, URY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-cafe-oscuro text-crema border-t border-cafe-medio/40">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <i class="fa-solid fa-envelope-open-text text-cafe-oro text-3xl mb-4"></i>
+      <h3 class="font-serif text-3xl font-bold mb-3">Únete a la Cofradía Matera</h3>
+      <p class="text-crema/70 text-xs md:text-sm max-w-md mx-auto mb-8">Recibe ofertas exclusivas, cosechas limitadas y secretos de preparación directamente en tu correo.</p>
+      
+      <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte al Rito del Mate!');" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Tu correo electrónico..." required class="bg-cafe-medio/30 border border-cafe-medio/60 text-crema placeholder-crema/40 px-5 py-3 rounded-full text-xs focus:outline-none focus:border-cafe-oro flex-grow">
+        <button type="submit" class="bg-cafe-oro hover:bg-yellow-600 text-cafe-oscuro font-bold px-8 py-3 rounded-full text-xs transition-colors">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1C120C] text-crema/60 py-12 border-t border-cafe-medio/20 text-xs">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-4 gap-8 mb-12">
+      <div class="flex flex-col gap-3">
+        <span class="font-serif font-bold text-lg text-crema tracking-wider">RAÍCES <span class="text-cafe-oro">&</span> RITO</span>
+        <p class="text-xs leading-relaxed">Especialistas en la cultura del mate tradicional, yerbas orgánicas y artesanía autóctona.</p>
+      </div>
+
+      <div>
+        <h5 class="font-bold text-crema mb-3 uppercase tracking-wider text-[11px]">Navegación</h5>
+        <ul class="space-y-2">
+          <li><a href="#historia" class="hover:text-crema transition-colors">Nuestro Rito</a></li>
+          <li><a href="#productos" class="hover:text-crema transition-colors">Mates & Yerbas</a></li>
+          <li><a href="#experiencia" class="hover:text-crema transition-colors">Guía de Preparación</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-bold text-crema mb-3 uppercase tracking-wider text-[11px]">Atención</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-crema transition-colors">Preguntas Frecuentes</a></li>
+          <li><a href="#" class="hover:text-crema transition-colors">Envíos y Entregas</a></li>
+          <li><a href="#" class="hover:text-crema transition-colors">Cuidado de Calabazas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-bold text-crema mb-3 uppercase tracking-wider text-[11px]">Redes</h5>
+        <div class="flex gap-4 text-base">
+          <a href="#" class="hover:text-cafe-oro transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-cafe-oro transition-colors"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-cafe-oro transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 border-t border-crema/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© 2026 Raíces & Rito. Todos los derechos reservados.</p>
+      <p>Diseño en Tonos Crema & Café</p>
+    </div>
+  </footer>
+
+  <!-- Inline Script for Interactivity -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    // Filtering System for Products
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => {
+          b.classList.remove('active-tab');
+          b.classList.add('inactive-tab');
+        });
+
+        // Add active class to clicked button
+        btn.classList.add('active-tab');
+        btn.classList.remove('inactive-tab');
+
+        const filter = btn.getAttribute('data-filter');
+
+        productCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Quiz Options Logic
+    const quizOptions = document.querySelectorAll('.quiz-option');
+    const resultTitle = document.getElementById('result-title');
+    const resultDesc = document.getElementById('result-desc');
+
+    const quizData = {
+      suave: {
+        title: "Yerba Orgánica Suave + Mate Cerámica",
+        desc: "Ideal para iniciar en el mundo del mate con notas dulzonas y fácil lavado sin riesgo de acidez."
+      },
+      intenso: {
+        title: "Yerba Barbacuá Reserva 24m + Mate Imperial",
+        desc: "Para materos experimentados que buscan molienda intensa, notas ahumadas y espuma abundante."
+      },
+      herbal: {
+        title: "Blend Botánico + Mate de Algarrobo",
+        desc: "Combinación refrescante de yerba con menta, cedrón y la calidez natural de la madera maciza."
+      }
+    };
+
+    quizOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        quizOptions.forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+
+        const type = opt.getAttribute('data-type');
+        resultTitle.textContent = quizData[type].title;
+        resultDesc.textContent = quizData[type].desc;
+      });
+    });
+  </script>
+</body>
+</html>

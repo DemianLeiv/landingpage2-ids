@@ -1,0 +1,85 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* ==========================================================================
+   CONFIGURACIÓN DE COLORES Y VARIABLES PALETA CREMA & CAFÉ
+   ========================================================================== */
+
+:root {
+  --color-crema: #FAF6F0;
+  --color-crema-intenso: #F3ECE1;
+  --color-cafe-claro: #D9C3B0;
+  --color-cafe-suave: #B89B82;
+  --color-cafe-medio: #5C4033;
+  --color-cafe-oscuro: #2A1A10;
+  --color-cafe-oro: #C89D66;
+}
+
+/* Custom Tailwind Classes Map & Utilities */
+.bg-crema { background-color: var(--color-crema); }
+.bg-crema-intenso { background-color: var(--color-crema-intenso); }
+.bg-cafe-claro\/20 { background-color: rgba(217, 195, 176, 0.2); }
+.bg-cafe-claro\/30 { background-color: rgba(217, 195, 176, 0.3); }
+.bg-cafe-suave\/30 { background-color: rgba(184, 155, 130, 0.3); }
+.bg-cafe-medio { background-color: var(--color-cafe-medio); }
+.bg-cafe-medio\/30 { background-color: rgba(92, 64, 51, 0.3); }
+.bg-cafe-medio\/40 { background-color: rgba(92, 64, 51, 0.4); }
+.bg-cafe-oscuro { background-color: var(--color-cafe-oscuro); }
+.bg-cafe-oscuro\/40 { background-color: rgba(42, 26, 16, 0.4); }
+.bg-cafe-oro { background-color: var(--color-cafe-oro); }
+.bg-cafe-oro\/20 { background-color: rgba(200, 157, 102, 0.2); }
+
+.text-crema { color: var(--color-crema); }
+.text-cafe-medio { color: var(--color-cafe-medio); }
+.text-cafe-oscuro { color: var(--color-cafe-oscuro); }
+.text-cafe-oro { color: var(--color-cafe-oro); }
+
+.border-cafe-claro\/20 { border-color: rgba(217, 195, 176, 0.2); }
+.border-cafe-claro\/30 { border-color: rgba(217, 195, 176, 0.3); }
+.border-cafe-claro\/40 { border-color: rgba(217, 195, 176, 0.4); }
+.border-cafe-medio { border-color: var(--color-cafe-medio); }
+.border-cafe-medio\/20 { border-color: rgba(92, 64, 51, 0.2); }
+.border-cafe-medio\/30 { border-color: rgba(92, 64, 51, 0.3); }
+.border-cafe-medio\/40 { border-color: rgba(92, 64, 51, 0.4); }
+.border-cafe-medio\/60 { border-color: rgba(92, 64, 51, 0.6); }
+
+/* Typography */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Cinzel', serif;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Filter Tab Styles */
+.active-tab {
+  background-color: var(--color-cafe-oscuro);
+  color: var(--color-crema);
+  box-shadow: 0 2px 8px rgba(42, 26, 16, 0.15);
+}
+
+.inactive-tab {
+  background-color: transparent;
+  color: var(--color-cafe-medio);
+}
+
+.inactive-tab:hover {
+  background-color: rgba(217, 195, 176, 0.3);
+  color: var(--color-cafe-oscuro);
+}
+
+/* Quiz Option Active State */
+.quiz-option.active {
+  border-color: var(--color-cafe-oscuro);
+  background-color: rgba(217, 195, 176, 0.2);
+}
